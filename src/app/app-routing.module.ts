@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'berhasil',
+    loadChildren: () => import('./berhasil/berhasil.module').then( m => m.BerhasilPageModule)
+  },
 ];
 
 @NgModule({

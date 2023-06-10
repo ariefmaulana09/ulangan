@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
+import { NFC, Ndef } from '@awesome-cordova-plugins/nfc/ngx';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
@@ -14,6 +15,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [
+    NFC,
+    Ndef
+  ]
 })
 export class HomePageModule {}
